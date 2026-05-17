@@ -1,7 +1,15 @@
 {
-  "public": true,
-  "cleanUrls": true,
+  "version": 2,
+  "builds": [
+    {
+      "src": "ip-logger/**/*",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/(.*)",
+      "dest": "/ip-logger/$1"
+    }
   ]
 }
